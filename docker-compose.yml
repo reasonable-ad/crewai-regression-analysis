@@ -1,0 +1,14 @@
+# docker-compose.yml
+
+services:
+  crewai-app:
+    build: .
+    ports:
+      - "8000:8000"  # FastAPI
+      - "8501:8501"  # Streamlit
+    environment:
+      - HUGGINGFACEHUB_API_TOKEN=${HUGGINGFACEHUB_API_TOKEN}
+    volumes:
+      - ./jobs:/app/jobs  # Persist job data outside container
+    env_file:
+      - .env

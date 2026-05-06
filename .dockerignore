@@ -1,0 +1,41 @@
+# .dockerignore
+# Files to exclude from Docker build
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Git
+.git/
+.gitignore
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Environment files (secrets - don't bake into image)
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Jobs directory (mounted as volume instead)
+jobs/
+
+# Logs
+*.log
+logs.txt
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
