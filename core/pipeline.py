@@ -244,6 +244,7 @@ def create_tasks(agents: Dict[str, Agent], executor_tool: CodeExecutor) -> List[
     # EXACT text from your notebook
     modeling_evaluation_task = Task(
         description=(
+             "**CRITICAL: You MUST use the 'Notebook Code Executor' tool to execute code. Do NOT just write code - CALL the tool.**\n\n"
             "You MUST generate Python code assuming global variables X_train, X_test, y_train, y_test exist, and execute it using the 'Notebook Code Executor' tool.\n\n"
             "STEP 0 - DATA VALIDATION:\n"
             "Before training any models, check for and handle NaN values:\n"
